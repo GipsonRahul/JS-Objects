@@ -1,2 +1,2 @@
-# JS-Objects
-getting values from html to js objects
+# JS-Objects-Class-Dynamic_Table
+Creating Dynamic Table using JS
