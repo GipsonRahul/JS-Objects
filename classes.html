@@ -4,85 +4,101 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
+    <title>Dynamic Table Using JS</title>
     <style>
+        form{
+            display: flex;
+        }
+        .container{
+            flex-basis: 60%;
+        }
+        .res{
+            flex-basis: 40%;
+        }
         label{
             display: inline-block;
-            min-width:140px;
-            margin-bottom: 20px;
+            min-width:120px;
+            margin-bottom: 10px;
         }
         input{
-            padding: 10px 20px;
+            padding: 2px 20px;
         }
         button{
-            margin-top: 20px;
-            padding: 10px;
+            margin: 5px;
+            padding: 5px;
         }
         table{
             margin: 10px;
         }
         td ,th{ 
-            border: 2px solid black;
-            padding: 15px;
+            font-size: 15px;
+            border: 1px solid black;
+            padding: 3px 5px;
             text-align: center;
+        }
+        .selected ,.selected td{
+            border: 2px solid red;
         }
     </style>
 </head>
 <body>
     <form action="">
-        <div>
-            <label for="reg">Register Number :</label>
-            <input type="text" name="reg" id="reg-no" placeholder="Enter your Register number here..">
+        <div id="container">
+            <div>
+                <label for="reg">Register Number : </label>
+                <input type="text" value="" name="reg" id="reg-no" placeholder="Enter your Register number here..">
+            </div>
+            <div>
+                <label for="fname"> Name : </label>
+                <input type="text" name="fname" id="f-name" placeholder="Enter your name here..">
+            </div>
+            <div>
+                <label for="address">Address : </label>
+                <input type="text" name="address" id="address" placeholder="Enter your address here..">
+            </div>
+            <div>
+                <label for="dept">Department : </label>
+                <input type="text" name="dept" id="dept" placeholder="Eg : CSE ,IT ,ECE ,...">
+            </div>
+            <div>
+                <label for="gender">Gender : </label>
+                <input type="text" name="gender" id="gender" placeholder="male / female">
+            </div>
+            <div>
+                <label for="dob">Date of Birth : </label>
+                <input type="date" name="dob" id="dob" placeholder="dd/mm/yyyy">
+            </div>
+            <div>
+                <label for="contact_no">contact No. : </label>
+                <input type="text" name="contact_no" id="contact-no" placeholder="Enter your contact-no here ...">
+            </div>
+            <div>
+                <label for="mark-1">mark-1 : </label>
+                <input type="text" name="mark-1" id="mark-1" placeholder="mark-1">
+            </div>
+            <div>
+                <label for="mark-2">mark-2 : </label>
+                <input type="text" name="mark-2" id="mark-2" placeholder="mark-2">
+            </div>
+            <div>
+                <label for="mark-3">mark-3 : </label>
+                <input type="text" name="mark-3" id="mark-3" placeholder="mark-3">
+            </div>
+            <div>
+                <label for="mark-4">mark-4 : </label>
+                <input type="text" name="mark-4" id="mark-4" placeholder="mark-4">
+            </div>
+            <div>
+                <label for="mark-5">mark-5 : </label>
+                <input type="text" name="mark-5" id="mark-5" placeholder="mark-5">
+            </div>
+            <div>
+                <button  id="btn" onclick="create(event)">Add</button>
+                <button  id="update-btn">Update</button>
+            </div>
         </div>
-        <div>
-            <label for="fname"> Name : </label>
-            <input type="text" name="fname" id="f-name" placeholder="Enter your name here..">
-        </div>
-        <div>
-            <label for="address">Address : </label>
-            <input type="text" name="address" id="address" placeholder="Enter your address here..">
-        </div>
-        <div>
-            <label for="dept">Department : </label>
-            <input type="text" name="dept" id="dept" placeholder="Eg : CSE ,IT ,ECE ,...">
-        </div>
-        <div>
-            <label for="gender">Gender : </label>
-            <input type="text" name="gender" id="gender" placeholder="male / female">
-        </div>
-        <div>
-            <label for="dob">Date of Birth : </label>
-            <input type="text" name="dob" id="dob" placeholder="dd/mm/yyyy">
-        </div>
-        <div>
-            <label for="contact_no">contact No. : </label>
-            <input type="text" name="contact_no" id="contact-no" placeholder="Enter your contact-no here ...">
-        </div>
-        <div>
-            <label for="mark-1">mark-1 : </label>
-            <input type="text" name="mark-1" id="mark-1" placeholder="mark-1">
-        </div>
-        <div>
-            <label for="mark-2">mark-2 : </label>
-            <input type="text" name="mark-2" id="mark-2" placeholder="mark-2">
-        </div>
-        <div>
-            <label for="mark-3">mark-3 : </label>
-            <input type="text" name="mark-3" id="mark-3" placeholder="mark-3">
-        </div>
-        <div>
-            <label for="mark-4">mark-4 : </label>
-            <input type="text" name="mark-4" id="mark-4" placeholder="mark-4">
-        </div>
-        <div>
-            <label for="mark-5">mark-5 : </label>
-            <input type="text" name="mark-5" id="mark-5" placeholder="mark-5">
-        </div>
-        <div>
-            <button  id="btn" onclick="create(event)">Submit</button>
-        </div>
+        <div id="res"></div>
     </form>
-    <p></p>
     <script src="classes.js"></script>
 </body>
 </html>
